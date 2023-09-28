@@ -48,7 +48,7 @@ public abstract class Entity {
     //endregion
 
     //region Конструкторы
-
+    public Entity(){}
     /**
      * Конструктор с параметрами
      * @param DPS атака
@@ -80,12 +80,12 @@ public abstract class Entity {
         this.HP = Math.max(Math.min(HP, maxHealth), 0);
     }
 
-    private void setMinDamage(int minDamage) {
+    public void setMinDamage(int minDamage) {
         this.minDamage = (int) Math.max(Math.min(minDamage, maxHealth*0.2), 1);
     }
 
-    private void setMaxDamage(int maxDamage) {
-        this.maxDamage = (int) Math.max(Math.min(maxDamage, maxHealth*0.5), this.minDamage);;
+    public void setMaxDamage(int maxDamage) {
+        this.maxDamage = (int) Math.max(Math.min(maxDamage, maxHealth*0.5), this.minDamage);
     }
 
     //endregion
@@ -124,6 +124,7 @@ public abstract class Entity {
 
     //region Методы
     /**
+     * Проверка на состояние.
      * @return true - если существо живо, false - если мертво.
      */
     public boolean checkHealth(){

@@ -37,6 +37,8 @@ public class Battle {
                 }
             }
 
+            System.out.println("Нанесено 0 урона.");
+
         }else System.out.println("Мертвые уже не сражаются.");
     }
 

@@ -15,6 +15,7 @@ public class Player extends Entity {
     //endregion
 
     //region Конструкторы
+    public Player(){}
     public Player(int DPS, int DEF, int HP, int minDamage, int maxDamage){
         super(DPS, DEF, HP, minDamage, maxDamage);
         healCount = 3;
